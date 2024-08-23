@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('bg.jpg'); /* Ensure the path to your image is correct */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.todo-container {
+    background-color: rgba(230, 230, 250, 0.8); /* Slightly transparent background */
+    padding: 20px; /* Reduced padding */
+    border-radius: 12px;
+    border: 3px solid #C5A3B5;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Limit maximum width */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+h1 {
+    margin-bottom: 20px; /* Reduced margin */
+    text-align: center;
+    font-size: 2em; /* Slightly smaller heading */
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column; /* Stack input fields vertically */
+    gap: 10px; /* Space between inputs */
+    margin-bottom: 20px; /* Space below the input container */
+}
+
+#task-input, #due-date-input, #priority-input {
+    width: calc(100% - 22px); /* Adjust width to fit within container */
+    padding: 15px; /* Increased padding for height */
+    border-radius: 8px;
+    border: 1px solid #B0C4DE;
+    font-size: 1.2em; /* Match font size of Add Task button */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+#add-task-btn {
+    width: calc(100% - 22px); /* Adjust width to fit within container */
+    background-color: #9370DB;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 15px; /* Increased padding for height */
+    font-size: 1.2em; /* Matching font size */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+#add-task-btn:hover {
+    background-color: burlywood;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Reduced margin */
+}
+
+.filter-btn {
+    padding: 8px 12px; /* Reduced padding */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #9370DB;
+    color: white;
+    font-size: 1em; /* Smaller font size */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.filter-btn:hover {
+    background-color: burlywood;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    max-height: 300px; /* Limit height and enable scrolling */
+    overflow-y: auto;
+}
+
+.task-item {
+    display: flex;
+    flex-direction: row; /* Display items in a row */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Reduced padding */
+    border-bottom: 1px solid #B0C4DE;
+    font-size: 1em; /* Smaller font size */
+    margin-bottom: 10px; /* Space between task items */
+    gap: 10px; /* Space between task elements */
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    color: #B0C4DE;
+}
+
+.task-item .task-text {
+    flex-grow: 1;
+    margin-right: 10px; /* Space between text and other elements */
+}
+
+.task-item button {
+    margin: 0 5px; /* Reduced margins */
+    background-color: #9370DB;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 8px; /* Smaller padding */
+    font-size: 0.9em; /* Slightly smaller font size */
+}
+
+.task-item button.edit-btn {
+    background-color: #DA70D6;
+}
+
+.task-item button.complete-btn {
+    background-color: #01cf12;
+}
+
+.task-item button:hover {
+    opacity: 0.8;
+}
+
+.task-priority {
+    color: #fff;
+    background-color: #6c757d;
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.task-priority.high {
+    background-color: #DC143C;
+}
+
+.task-priority.medium {
+    background-color: #FFD700;
+}
+
+.task-priority.low {
+    background-color: #32CD32;
+}
+
+.task-due-date {
+    font-size: 0.9em;
+    color: #808080;
+    margin-left: 10px; /* Space between due date and other elements */
+}
+
+@media (max-width: 600px) {
+    .input-container, .filter-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #task-input, #add-task-btn {
+        width: 100%;
+        margin-left: 0;
+    }
+}
