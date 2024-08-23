@@ -1,1 +1,2 @@
 # To_Do
+A To-Do List application is a tool that helps users manage and organize their tasks efficiently. It allows users to add, edit, and delete tasks, set due dates, and prioritize them, ensuring that important tasks are completed on time. The application typically features a user-friendly interface that displays tasks in a list format, with options for marking them as completed and filtering by status.
